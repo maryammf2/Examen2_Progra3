@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionReservas_LaboratoriosDeComputo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21a64bb4f1ee41fe3cff669b5dfdb4e845680b4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61febf40423d6aa305fd9bb8982d515629b08452")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionReservas_LaboratoriosDeComputo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionReservas_LaboratoriosDeComputo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
