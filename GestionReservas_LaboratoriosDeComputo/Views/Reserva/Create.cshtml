@@ -1,0 +1,69 @@
+﻿@model GestionReservas_LaboratoriosDeComputo.Models.Reserva
+
+@{
+    ViewData["Title"] = "Crear Reserva";
+}
+
+<h2>Crear Nueva Reserva</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Codigo" class="form-label">Código de Reserva</label>
+        <input asp-for="Codigo" class="form-control" />
+        <span asp-validation-for="Codigo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="NombreProfesor" class="form-label">Nombre del Profesor</label>
+        <input asp-for="NombreProfesor" class="form-control" />
+        <span asp-validation-for="NombreProfesor" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="CorreoInstitucional" class="form-label">Correo Institucional</label>
+        <input asp-for="CorreoInstitucional" class="form-control" />
+        <span asp-validation-for="CorreoInstitucional" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Laboratorio" class="form-label">Laboratorio</label>
+        <select asp-for="Laboratorio" class="form-control">
+            <option value="">-- Seleccione --</option>
+            <option value="Lab-01">Lab-01</option>
+            <option value="Lab-02">Lab-02</option>
+            <option value="Lab-03">Lab-03</option>
+            <option value="Lab-Redes">Lab-Redes</option>
+            <option value="Lab-IA">Lab-IA</option>
+        </select>
+        <span asp-validation-for="Laboratorio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="FechaReserva" class="form-label">Fecha de la Reserva</label>
+        <input asp-for="FechaReserva" type="date" class="form-control" />
+        <span asp-validation-for="FechaReserva" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="HoraInicio" class="form-label">Hora de Inicio</label>
+        <input asp-for="HoraInicio" type="time" class="form-control" />
+        <span asp-validation-for="HoraInicio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="HoraFin" class="form-label">Hora de Fin</label>
+        <input asp-for="HoraFin" type="time" class="form-control" />
+        <span asp-validation-for="HoraFin" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Descripcion" class="form-label">Motivo / Descripción</label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Reserva</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver al Listado</a>
+    </form>
+}
+

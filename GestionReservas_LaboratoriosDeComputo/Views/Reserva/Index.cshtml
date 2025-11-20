@@ -1,0 +1,50 @@
+﻿@model IEnumerable<GestionReservas_LaboratoriosDeComputo.Models.Reserva>
+
+@{
+    ViewData["Title"] = "Listado de Reservas";
+}
+
+<h2>Listado de Reservas</h2>
+
+<!-- Mensaje de éxito -->
+@if (TempData["MensajeExito"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensajeExito"]
+    </div>
+}
+
+<a asp-action="Create" class="btn btn-primary mb-3">Nueva Reserva</a>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Profesor</th>
+            <th>Correo</th>
+            <th>Laboratorio</th>
+            <th>Fecha</th>
+            <th>Hora Inicio</th>
+            <th>Hora Fin</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                <td>@Html.DisplayFor(modelItem => item.NombreProfesor)</td>
+                <td>@Html.DisplayFor(modelItem => item.CorreoInstitucional)</td>
+                <td>@Html.DisplayFor(modelItem => item.Laboratorio)</td>
+                <td>@item.FechaReserva.ToString("dd-MM-yyyy")</td>
+                <td>@item.HoraInicio.ToString(@"hh\:mm")</td>
+                <td>@item.HoraFin.ToString(@"hh\:mm")</td>
+                <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+}
